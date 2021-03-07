@@ -33,7 +33,7 @@ class NoIndexNoFollowExtension extends AbstractExtension
 
         $filterName = $this->resolveFilterName($request);
 
-        if (empty($filterName)) {
+        if ('' === $filterName) {
             return false;
         }
 
@@ -53,7 +53,7 @@ class NoIndexNoFollowExtension extends AbstractExtension
     {
         $seoRouteConfig = $request->attributes->get('_seo', []);
 
-        $filterName = empty($seoRouteConfig) || !array_key_exists('no_index_no_follow_filter', $seoRouteConfig) ? '' : $seoRouteConfig['no_index_no_follow_filter'];
+        $filterName = '' === $seoRouteConfig || !array_key_exists('no_index_no_follow_filter', $seoRouteConfig) ? '' : $seoRouteConfig['no_index_no_follow_filter'];
         if (!is_string($filterName)) {
             throw new \InvalidArgumentException('Invalid config value provided : _seo.no_index_filter should be of type string');
         }

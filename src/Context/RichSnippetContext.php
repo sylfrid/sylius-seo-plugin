@@ -36,7 +36,7 @@ final class RichSnippetContext
     public function getAvailableRichSnippets(): array
     {
         $subject = $this->guessSubject();
-        if (!$subject) {
+        if (null === $subject) {
             return [];
         }
 
