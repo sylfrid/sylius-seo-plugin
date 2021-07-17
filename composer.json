@@ -4,7 +4,7 @@
     "keywords": ["sylius", "sylius-plugin"],
     "description": "Sylius SEO plugin by Dedi.",
     "license": "MIT",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "require": {
         "php": "^7.4",
         "sylius/sylius": "^1.7"
